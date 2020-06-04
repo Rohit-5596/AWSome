@@ -39,11 +39,11 @@ public class Employer {
 	
 	@NotNull
 	@Column(name="city", length=10)
-	private String[] city;
+	private String city;
 	
 	@NotNull
 	@Column(name="state", length=10)
-	private String[] state;
+	private String state;
 	
 	@NotNull
 	@Column(name="pincode", length=6)
@@ -104,19 +104,19 @@ public class Employer {
 		this.address = address;
 	}
 
-	public String[] getCity() {
+	public String getCity() {
 		return city;
 	}
 
-	public void setCity(String[] city) {
+	public void setCity(String city) {
 		this.city = city;
 	}
 
-	public String[] getState() {
+	public String getState() {
 		return state;
 	}
 
-	public void setState(String[] state) {
+	public void setState(String state) {
 		this.state = state;
 	}
 
@@ -185,7 +185,7 @@ public class Employer {
 	}
 	
 
-	public Employer(int employerId, String employerName, String address, String[] city, String[] state, int pincode,
+	public Employer(int employerId, String employerName, String address, String city, String state, int pincode,
 			String contactName, long phNo, int businessType, long tanNo, long regnNo, Timestamp lastModifiedDate) {
 		super();
 		this.employerId = employerId;
@@ -210,7 +210,7 @@ public class Employer {
 	@Override
 	public String toString() {
 		return "BusinessUser [employerId=" + employerId + ", employerName=" + employerName + ", address=" + address + ", city="
-				+ Arrays.toString(city) + ", state=" + Arrays.toString(state) + ", pincode=" + pincode
+				+ city + ", state=" + state + ", pincode=" + pincode
 				+ ", contactName=" + contactName + ", phNo=" + phNo + ", businessType=" + businessType + ", tanNo="
 				+ tanNo + ", regnNo=" + regnNo + ",creationDate=" + creationDate +" "
 						+ ",creationDate=" + creationDate +"]";
